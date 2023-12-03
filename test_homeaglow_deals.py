@@ -21,9 +21,19 @@ def test_valid_zip_code(self):
     deals = self.find_elements_by_class_name("deal")
     assert len(deals) > 0
 
+def test_verify_discount_voucher(self):
+    self.pages.valid_zip_code()
+    self.pages.select_voucher_deals()
+    assert self.is_voucher_displayed is True
+
 def test_credit_card(self):
     self.pages.valid_zip_code()
+    self.pages.select_voucher_deals
+    self.pages.use_credit_card()
+    self.pages.check_out()
     
+
+
 
 
 

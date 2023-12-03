@@ -7,7 +7,10 @@ class CommonOps:
         self._wait = WebDriverWait(self.driver, 10)
 
     def wait_for(self, locator):
-        return self._wait.until(ec.presence_of_eleent_located(locator))
+        return self._wait.until(ec.presence_of_element_located(locator))
     
     def find(self, lcoator):
         return self.driver.find_element(*locator)
+   
+    def scroll_down_to_element(self, locator):
+        return self._scroll.until(ec.presence_of_element_located(locator))
